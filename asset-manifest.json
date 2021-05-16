@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/Planthor-Team/planthor-team.github.io/static/js/main.5796087d.chunk.js",
-    "main.js.map": "/Planthor-Team/planthor-team.github.io/static/js/main.5796087d.chunk.js.map",
-    "runtime-main.js": "/Planthor-Team/planthor-team.github.io/static/js/runtime-main.529d493e.js",
-    "runtime-main.js.map": "/Planthor-Team/planthor-team.github.io/static/js/runtime-main.529d493e.js.map",
-    "static/js/2.2d6bc1f1.chunk.js": "/Planthor-Team/planthor-team.github.io/static/js/2.2d6bc1f1.chunk.js",
-    "static/js/2.2d6bc1f1.chunk.js.map": "/Planthor-Team/planthor-team.github.io/static/js/2.2d6bc1f1.chunk.js.map",
-    "static/js/3.34b34e92.chunk.js": "/Planthor-Team/planthor-team.github.io/static/js/3.34b34e92.chunk.js",
-    "static/js/3.34b34e92.chunk.js.map": "/Planthor-Team/planthor-team.github.io/static/js/3.34b34e92.chunk.js.map",
-    "index.html": "/Planthor-Team/planthor-team.github.io/index.html",
-    "static/js/2.2d6bc1f1.chunk.js.LICENSE.txt": "/Planthor-Team/planthor-team.github.io/static/js/2.2d6bc1f1.chunk.js.LICENSE.txt"
+    "main.js": "/Planthor_ClientFrontEndWebApp/static/js/main.5796087d.chunk.js",
+    "main.js.map": "/Planthor_ClientFrontEndWebApp/static/js/main.5796087d.chunk.js.map",
+    "runtime-main.js": "/Planthor_ClientFrontEndWebApp/static/js/runtime-main.a21dcc41.js",
+    "runtime-main.js.map": "/Planthor_ClientFrontEndWebApp/static/js/runtime-main.a21dcc41.js.map",
+    "static/js/2.2d6bc1f1.chunk.js": "/Planthor_ClientFrontEndWebApp/static/js/2.2d6bc1f1.chunk.js",
+    "static/js/2.2d6bc1f1.chunk.js.map": "/Planthor_ClientFrontEndWebApp/static/js/2.2d6bc1f1.chunk.js.map",
+    "static/js/3.34b34e92.chunk.js": "/Planthor_ClientFrontEndWebApp/static/js/3.34b34e92.chunk.js",
+    "static/js/3.34b34e92.chunk.js.map": "/Planthor_ClientFrontEndWebApp/static/js/3.34b34e92.chunk.js.map",
+    "index.html": "/Planthor_ClientFrontEndWebApp/index.html",
+    "static/js/2.2d6bc1f1.chunk.js.LICENSE.txt": "/Planthor_ClientFrontEndWebApp/static/js/2.2d6bc1f1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.529d493e.js",
+    "static/js/runtime-main.a21dcc41.js",
     "static/js/2.2d6bc1f1.chunk.js",
     "static/js/main.5796087d.chunk.js"
   ]
