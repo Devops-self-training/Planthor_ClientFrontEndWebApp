@@ -2,17 +2,47 @@ version: 2.1
 orbs:
   node: circleci/node@4.3.0
 jobs:
-  test:
+  build:
     executor:
       name: node/default
-      tag: '13.14'
+      tag: "13.14"
     steps:
       - checkout
       - node/install-packages
       - run:
+          name: test & build
           command: npm run test && npm run build
-          
+      - run:
+          name: check folder
+          command: ls
+      - persist_to_workspace:
+          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is
+          # taken to be the root directory of the workspace.
+          root: workspace
+          # Must be relative path from root
+          paths:
+            - /build
+
+  deploy:
+    # machine:
+    #   image: ubuntu-1604:202007-01
+    #   docker_layer_caching: true
+    executor:
+      name: node/default
+      tag: "13.14"
+    steps:
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: /tmp/workspace
+
+      - run:
+          name: testing
+          command: ls
+
 workflows:
   test_my_app:
     jobs:
-      - test
+      - build
+      - deploy:
+          requires:
+            - build
