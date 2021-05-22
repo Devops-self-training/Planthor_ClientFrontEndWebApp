@@ -15,13 +15,8 @@ jobs:
       - run:
           name: check folder
           command: ls
-      - persist_to_workspace:
-          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is
-          # taken to be the root directory of the workspace.
-          root: workspace
-          # Must be relative path from root
-          paths:
-            - /build
+      - run: mkdir -p workspace
+      - run: cp ./public/* ./workspace && cd workspace && ls
 
   deploy:
     # machine:
@@ -33,7 +28,7 @@ jobs:
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: /tmp/workspace
+          at: /tmp/public
 
       - run:
           name: testing
