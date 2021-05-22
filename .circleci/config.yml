@@ -16,8 +16,15 @@ jobs:
           name: check folder
           command: ls
       - run: mkdir -p workspace
-      - run: cp ./public/* ./workspace && cd workspace && ls
-
+      - run: cp ./public ./workspace && cd workspace && ls
+        # Persist the specified paths (workspace/echo-output) into the workspace for use in downstream job.
+      - persist_to_workspace:
+          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is
+          # taken to be the root directory of the workspace.
+          root: workspace
+          # Must be relative path from root
+          paths:
+            - public/*
   deploy:
     # machine:
     #   image: ubuntu-1604:202007-01
