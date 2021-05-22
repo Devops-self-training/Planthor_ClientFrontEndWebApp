@@ -36,10 +36,9 @@ jobs:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: /tmp/workspace
-      - working_directory: /tmp
       - run:
           name: testing
-          command: ls
+          command: cd /tmp/workspace && ls
 
 workflows:
   test_my_app:
