@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@4.3.0
+  github-pages-orb: fernfernfern/github-pages-orb@0.0.10
 jobs:
   build:
     executor:
@@ -37,7 +38,7 @@ jobs:
           # Must be absolute path or relative path from working_directory
           at: /tmp/workspace
       - run:
-          name: deploy to githubpage
+          name: setup githubpage
           command: |
             cd /tmp/workspace/public &&
             ls &&
@@ -46,8 +47,12 @@ jobs:
             git init &&
             git add . &&
             git commit -m "update github frontend" &&
-            git branch -m master main
+            git branch -m master main &&
             git remote add origin https://${github_username}:${github_password}@github.com/Devops-self-training/DemoFronendt12879.github.io.git &&
+      - run:
+          name: fetch the code
+          command: |
+            git pull origin main
             git push -u origin main
 
 workflows:
