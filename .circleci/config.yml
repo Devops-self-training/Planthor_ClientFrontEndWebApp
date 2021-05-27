@@ -39,7 +39,11 @@ jobs:
       - run:
           name: testing
           command: cd /tmp/workspace/public && ls
-      - run: ../deploy-githubpage.sh
+      - run:
+          name: run script
+          command: |
+            cd .. &&
+            deploy-githubpage.sh
 
 workflows:
   test_my_app:
