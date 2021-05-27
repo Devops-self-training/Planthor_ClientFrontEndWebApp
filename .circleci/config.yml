@@ -44,6 +44,8 @@ jobs:
           command: |
             git init &&
             git add . &&
+            git config --global user.email "you@example.com" &&
+            git config --global user.name "Your Name" &&
             git commit -m "update github frontend" &&
             git branch -M main &&
             git remote add origin https://akakshuki:Dinhhoang1207@github.com/Devops-self-training/DemoFronendt12879.github.io.git &&
