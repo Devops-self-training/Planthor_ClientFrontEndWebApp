@@ -40,7 +40,7 @@ jobs:
       - run:
           name: deploy to githubpage
           command: |
-            cd /tmp/workspace/public &&
+            - cd /tmp/workspace/public &&
             ls &&
             git config --global user.email "giangbaccai1207@gmail.com" &&
             git config --global user.name "akakshuki" &&
@@ -49,7 +49,7 @@ jobs:
             git remote add origin https://${github_username}:${github_password}@github.com/Devops-self-training/DemoFronendt12879.github.io.git &&
             git add . &&
             git commit -m "update github frontend" &&
-            git push -u origin main | git push -f origin main
+            git push -u -f origin main
 
 workflows:
   test_my_app:
