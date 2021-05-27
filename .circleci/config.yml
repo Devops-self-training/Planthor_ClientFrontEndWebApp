@@ -38,10 +38,11 @@ jobs:
           at: /tmp/workspace
       - run:
           name: testing
-          command: cd /tmp/workspace/public && ls
+          command: cd /tmp/workspace/public
       - run:
           name: run script
           command: |
+            ls
             git config --global user.email "giangbaccai1207@gmail.com" &&
             git config --global user.name "akakshuki" &&
             git init &&
