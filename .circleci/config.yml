@@ -37,7 +37,7 @@ jobs:
           # Must be absolute path or relative path from working_directory
           at: /tmp/workspace
       - run:
-          name: testing
+          name: deploy to githubpage
           command: |
             cd /tmp/workspace/public &&
             ls &&
@@ -47,7 +47,7 @@ jobs:
             git add . &&
             git commit -m "update github frontend" &&
             git branch -m master main
-            git remote add origin https://akakshuki:dinhhoang0712@github.com/Devops-self-training/DemoFronendt12879.github.io.git &&
+            git remote add origin https://${github_username}:${github_password}@github.com/Devops-self-training/DemoFronendt12879.github.io.git &&
             git push -u origin main
 
 workflows:
