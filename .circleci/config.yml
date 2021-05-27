@@ -48,7 +48,7 @@ jobs:
             git commit -m "update github frontend" &&
             git branch -m master main
             git remote add origin https://akakshuki:dinhhoang0712@github.com/Devops-self-training/DemoFronendt12879.github.io.git &&
-            git push -u origin master
+            git push -u origin main
 
 workflows:
   test_my_app:
