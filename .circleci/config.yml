@@ -47,11 +47,9 @@ jobs:
             git init &&
             git branch -m master main &&
             git remote add origin https://${github_username}:${github_password}@github.com/Devops-self-training/DemoFronendt12879.github.io.git &&
-            git pull origin main  --allow-unrelated-histories |true &&
-            git merge origin origin/master | true &&
             git add . &&
             git commit -m "update github frontend" &&
-            git push -u origin main
+            git push -u origin main | git push -f origin main
 
 workflows:
   test_my_app:
