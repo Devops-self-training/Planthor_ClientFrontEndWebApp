@@ -50,6 +50,7 @@ jobs:
             git branch -m master main &&
             git remote add origin https://${github_username}:${github_password}@github.com/Devops-self-training/DemoFronendt12879.github.io.git &&
             git pull origin main  --allow-unrelated-histories &&
+            git merge origin origin/master &&
             git push -u origin main
 
 workflows:
