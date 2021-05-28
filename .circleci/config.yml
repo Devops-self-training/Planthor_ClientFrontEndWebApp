@@ -17,7 +17,7 @@ jobs:
           name: check folder
           command: ls
       - run: mkdir -p workspace
-      - run: cp -r ./public ./workspace && cp -f ./deploy-githubpage.sh ./workspace && cd workspace && ls
+      - run: cp -r ./build ./workspace && cp -f ./deploy-githubpage.sh ./workspace && cd workspace && ls
         # Persist the specified paths (workspace/echo-output) into the workspace for use in downstream job.
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is
@@ -25,7 +25,7 @@ jobs:
           root: workspace
           # Must be relative path from root
           paths:
-            - public/*
+            - build/*
   deploy:
     # machine:
     #   image: ubuntu-1604:202007-01
@@ -40,15 +40,15 @@ jobs:
       - run:
           name: deploy to githubpage
           command: |
-            cd /tmp/workspace/public &&
+            cd /tmp/workspace/build &&
             ls &&
             git config --global user.email "giangbaccai1207@gmail.com" &&
             git config --global user.name "akakshuki" &&
             git init &&
-            git branch -M main &&
-            git remote add origin https://${github_username}:${github_password}@github.com/Devops-self-training/DemoFronendt12879.github.io.git &&
             git add . &&
             git commit -m "update github frontend" &&
+            git branch -M main &&
+            git remote add origin https://${github_username}:${github_password}@github.com/Devops-self-training/DemoFronendt12879.github.io.git &&
             git push -u -f origin main
 
 workflows:
